@@ -110,10 +110,6 @@ workflows:
       - deploy-app:
           requires:
             - create-eks-cluster
-      - test-app:
-          requires:
-            - deploy-app 
-      - rolling-update:
-          requires:
-            - test-app
+      - rolling-update
+
       
