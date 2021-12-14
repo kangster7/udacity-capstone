@@ -54,7 +54,7 @@ jobs:
             $SUDO mv eksctl_download/eksctl /usr/local/bin/
             rmdir eksctl_download
       - aws-eks/create-cluster:
-          cluster-name: uda-capstone-cluster
+          cluster-name: udacity-capstone-cluster
           node-type: t2.micro
           nodes-min: 2
           nodes-max: 4
@@ -113,6 +113,6 @@ workflows:
       - rolling-update:
           requires:
             - deploy-app
-            
+
 
       
