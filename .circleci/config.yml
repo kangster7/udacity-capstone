@@ -54,7 +54,7 @@ jobs:
             $SUDO mv eksctl_download/eksctl /usr/local/bin/
             rmdir eksctl_download
       - aws-eks/create-cluster:
-          cluster-name: udacity-new-cluster
+          cluster-name: udacity-new1-cluster
           node-type: t2.micro
           nodes-min: 2
           nodes-max: 4
@@ -79,7 +79,7 @@ jobs:
     steps:
       - checkout
       - aws-eks/update-kubeconfig-with-authenticator:
-          cluster-name: udacity-capstone-cluster
+          cluster-name: udacity-new1-cluster
           install-kubectl: true
       - kubernetes/create-or-update-resource:
           get-rollout-status: true
@@ -91,7 +91,7 @@ jobs:
     executor: aws-eks/python3
     steps:
       - aws-eks/update-kubeconfig-with-authenticator:
-          cluster-name: udacity-capstone-cluster
+          cluster-name: udacity-new1-cluster
           install-kubectl: true
       - run:
           name: initiate rolling deploymnt

@@ -20,7 +20,7 @@ A requirements.txt is used to ensure that all needed dependencies come along wit
 
 ## CircleCi - CI/CD Pipelines
 
-Used CircleCi to create a CI/CD Pipeline and deploy changes to the Cluster using Ansible.
+Used CircleCi to create a CI/CD Pipeline and deploy changes to the Cluster.
 
 ### Pipeline Overview
 
